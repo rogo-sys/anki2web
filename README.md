@@ -25,7 +25,7 @@ anki2web/
 ├─ server.py
 ├─ converter.py
 ├─ template.html
-├─ data    
+├─ data/    
     ├─ words.txt
     ├─ words2.txt
     ├─ words3.txt
