@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
-from http.server import BaseHTTPRequestHandler, HTTPServer
+# from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import html
 
@@ -83,7 +84,7 @@ if __name__ == "__main__":
     server_address = ('', PORT)
     print(f"Server started at port{PORT}!")
     print("Press Ctrl+C for stop")
-    httpd = HTTPServer(server_address, KindleHandler)
+    httpd = ThreadingHTTPServer(server_address, KindleHandler)
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
